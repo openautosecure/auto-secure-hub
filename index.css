@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AutoSecure design system — terminal/cyber aesthetic.
+   All colors MUST be HSL. */
+
+@layer base {
+  :root {
+    /* Dark by default — single theme */
+    --background: 220 25% 5%;
+    --foreground: 150 20% 92%;
+
+    --card: 220 22% 7%;
+    --card-foreground: 150 15% 92%;
+
+    --popover: 220 22% 7%;
+    --popover-foreground: 150 15% 92%;
+
+    --primary: 152 100% 50%;
+    --primary-foreground: 220 30% 6%;
+    --primary-glow: 160 100% 60%;
+
+    --secondary: 220 18% 12%;
+    --secondary-foreground: 150 15% 92%;
+
+    --muted: 220 16% 12%;
+    --muted-foreground: 150 8% 65%;
+
+    --accent: 152 80% 45%;
+    --accent-foreground: 220 30% 6%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 18% 14%;
+    --input: 220 18% 14%;
+    --ring: 152 100% 50%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, hsl(var(--primary) / 0.12), transparent 60%),
+      linear-gradient(to bottom, hsl(var(--background)), hsl(var(--background)));
+    min-height: 100vh;
+  }
+  h1, h2, h3, h4 {
+    @apply font-mono tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 24px hsl(var(--primary) / 0.55);
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.5) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(ellipse 60% 50% at 50% 30%, black, transparent 80%);
+  }
+}
