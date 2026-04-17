@@ -29,7 +29,7 @@ const SetupSection = () => {
           <p className="font-mono text-xs uppercase tracking-widest text-primary mb-3">// quickstart</p>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Up and running in 4 steps</h2>
           <p className="text-muted-foreground">
-            Requires Python 3.12+, a Discord bot token, and Microsoft Graph API credentials.
+            Requires Python 3.12+, a Discord bot token, and your API keys.
           </p>
         </div>
         <div className="space-y-4">
